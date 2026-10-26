@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap');
+html[dir="rtl"] body {font-family:'Cairo','Tajawal',sans-serif; direction:rtl; text-align:right;}
+html[dir="rtl"] .navbar-brand, html[dir="rtl"] .brand-copy, html[dir="rtl"] .topbar .container {direction:rtl;}
+html[dir="rtl"] .navbar-nav {padding-right:0;}
+html[dir="rtl"] .navbar-nav .nav-link::after {right:0; left:auto;}
+html[dir="rtl"] .service-ribbon-track {direction:rtl;}
+html[dir="rtl"] .service-ribbon-track a {direction:rtl;}
+html[dir="rtl"] .eyebrow {direction:rtl;}
+html[dir="rtl"] .eyebrow span {margin-left:.55rem; margin-right:0;}
+html[dir="rtl"] .hero-proof, html[dir="rtl"] .check-list>div, html[dir="rtl"] .topbar a, html[dir="rtl"] .footer-bottom, html[dir="rtl"] .social-links {direction:rtl;}
+html[dir="rtl"] .hero-proof, html[dir="rtl"] .check-list>div {text-align:right;}
+html[dir="rtl"] .fa-arrow-right, html[dir="rtl"] .fa-arrow-left {transform:scaleX(-1);}
+html[dir="rtl"] .ms-2 {margin-left:0!important; margin-right:.5rem!important;}
+html[dir="rtl"] .me-2 {margin-right:0!important; margin-left:.5rem!important;}
+html[dir="rtl"] .ms-auto {margin-left:0!important; margin-right:auto!important;}
+html[dir="rtl"] .modal-header {direction:rtl;}
+html[dir="rtl"] .btn-close {margin:-.5rem auto -.5rem -.5rem;}
+html[dir="rtl"] .form-label, html[dir="rtl"] .form-control, html[dir="rtl"] .form-select {text-align:right;}
+html[dir="rtl"] .form-select {background-position:left .75rem center;}
+html[dir="rtl"] .language-toggle {white-space:nowrap;}
+.language-switcher {display:flex; align-items:center;}
+.language-toggle {display:inline-flex;align-items:center;justify-content:center;padding:.45rem .8rem;border:1px solid rgba(255,255,255,.22);border-radius:999px;font-size:.82rem;font-weight:700;text-decoration:none;color:inherit;transition:all .2s ease;}
+.site-nav .language-toggle {border-color:rgba(20,35,65,.18);color:var(--bs-navbar-color,#15213b);}
+.site-nav .language-toggle:hover {background:#eff3ff;color:#254fd4;border-color:#cbd6ff;}
+html[dir="rtl"] .section-heading, html[dir="rtl"] .service-card, html[dir="rtl"] .project-info, html[dir="rtl"] .blog-content {text-align:right;}
+html[dir="rtl"] .footer-about {text-align:right;}
+@media(max-width:991.98px){.language-switcher{padding:.4rem 0;}.language-toggle{display:inline-flex;}}
+
+html[dir="rtl"] .language-toggle{direction:rtl;}
+html[dir="rtl"] .services-mega-menu .mega-service-link{direction:rtl;text-align:right;}
+@media(max-width:991.98px){html[dir="rtl"] .site-nav .navbar-nav>.nav-item>.nav-link{direction:rtl;}html[dir="rtl"] .site-nav .nav-cta,html[dir="rtl"] .site-nav .btn-shop{margin-right:.8rem!important;margin-left:.8rem!important;}}
