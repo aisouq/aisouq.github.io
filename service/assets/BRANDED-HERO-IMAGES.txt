@@ -1,0 +1,3 @@
+AI Souq branded hero and slider image update
+
+The supplied four images have been used across the homepage/service sliders and the CCTV retail image. Each image includes a subtle AI Souq logo watermark in a clean white plaque. The site references these local assets, so no external image hosting is required.
