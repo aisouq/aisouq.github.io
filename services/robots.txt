@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aisouq.ae/sitemap.xml
