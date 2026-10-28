@@ -1,0 +1,40 @@
+/* AI Souq premium service experience */
+:root{--ais-ink:#10213f;--ais-blue:#2458d3;--ais-cyan:#25b9d2;--ais-line:rgba(25,48,86,.11);--ais-soft:#f4f7fc}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{color:#25334c}
+.site-nav{backdrop-filter:blur(16px);box-shadow:0 8px 28px rgba(18,39,76,.06)}
+.service-ribbon{border-bottom:1px solid var(--ais-line);background:linear-gradient(90deg,#fff,#f5f8ff,#fff)}
+.service-ribbon-track a,.mega-service-link{transition:transform .22s ease,background .22s ease,border-color .22s ease}
+.service-ribbon-track a:hover,.mega-service-link:hover{transform:translateY(-2px)}
+.page-hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 85% 20%,rgba(55,114,232,.14),transparent 38%),linear-gradient(135deg,#f8faff 0%,#eef4ff 55%,#fff 100%)}
+.page-hero:after{content:"";position:absolute;z-index:-1;width:390px;height:390px;border:1px solid rgba(36,88,211,.12);border-radius:50%;right:-120px;bottom:-240px;box-shadow:0 0 0 45px rgba(36,88,211,.025),0 0 0 90px rgba(36,88,211,.02)}
+.page-hero h1{letter-spacing:-.04em;line-height:1.08;max-width:900px}
+.page-hero p{max-width:740px;line-height:1.85}
+.section-heading p{max-width:760px;margin-inline:auto;line-height:1.85}
+.service-detail-list{gap:26px}
+.service-detail{border:1px solid var(--ais-line);border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 12px 34px rgba(17,38,76,.045);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.service-detail:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(17,38,76,.09);border-color:rgba(36,88,211,.24)}
+.service-detail-visual{border-radius:18px}
+.detail-tags span{border:1px solid rgba(36,88,211,.12);background:#f5f8ff;border-radius:999px;padding:.48rem .78rem;font-size:.83rem}
+.text-link{font-weight:700}
+.free-survey-banner{background:linear-gradient(105deg,#11254b,#1e438a 68%,#2864d9);color:white}
+.free-survey-banner p{color:rgba(255,255,255,.78)}
+.btn-survey{box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.brand-logo-card{border:1px solid var(--ais-line);border-radius:16px;transition:transform .2s ease,box-shadow .2s ease}
+.brand-logo-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(17,38,76,.07)}
+.ais-process{padding:88px 0;background:linear-gradient(180deg,#f7f9fd,#fff)}
+.ais-process-head{max-width:760px;margin:0 auto 38px;text-align:center}
+.ais-process-head h2{font-size:clamp(1.8rem,3vw,2.65rem);font-weight:800;color:var(--ais-ink);letter-spacing:-.035em}
+.ais-process-head p{color:#63718a;line-height:1.85}
+.ais-process-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.ais-process-card{position:relative;background:#fff;border:1px solid var(--ais-line);border-radius:22px;padding:28px;box-shadow:0 10px 30px rgba(17,38,76,.035)}
+.ais-process-num{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#e9f0ff,#e7fbff);color:var(--ais-blue);font-weight:800;margin-bottom:18px}
+.ais-process-card h3{font-size:1.08rem;font-weight:800;color:var(--ais-ink);margin-bottom:9px}
+.ais-process-card p{font-size:.94rem;line-height:1.8;color:#63718a;margin:0}
+.ais-process-note{margin:24px auto 0;max-width:920px;padding:15px 18px;border-radius:14px;background:#edf4ff;color:#344c78;font-size:.9rem;line-height:1.75}
+.ais-service-cta{margin-top:28px;display:flex;align-items:center;justify-content:space-between;gap:22px;padding:28px 30px;border-radius:22px;background:linear-gradient(120deg,#11254b,#2458d3);color:#fff}
+.ais-service-cta h3{font-size:1.25rem;font-weight:800;margin:0 0 7px}.ais-service-cta p{color:rgba(255,255,255,.8);margin:0;line-height:1.7}
+.ais-service-cta .btn{flex-shrink:0}
+html[dir="rtl"] .ais-process-head{text-align:center}html[dir="rtl"] .ais-process-card{text-align:right}html[dir="rtl"] .ais-process-num{margin-left:0;margin-right:0}html[dir="rtl"] .ais-service-cta{direction:rtl}
+@media(max-width:767.98px){.ais-process{padding:60px 0}.ais-process-grid{grid-template-columns:1fr}.ais-process-card{padding:23px}.ais-service-cta{align-items:flex-start;flex-direction:column;padding:24px}.page-hero h1{letter-spacing:-.025em}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
