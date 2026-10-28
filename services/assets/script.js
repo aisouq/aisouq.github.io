@@ -36,6 +36,54 @@
     const service=btn.getAttribute('data-service');const select=document.querySelector('#leadService');if(service&&select){const arMap={'CCTV':'كاميرات المراقبة','CCTV & Surveillance':'كاميرات المراقبة','Access Control':'التحكم بالدخول','Networking':'الشبكات وتمديد الكابلات المنظمة','Wi-Fi':'حلول الواي فاي','Smart Automation':'أتمتة المنازل والمكاتب الذكية','AV':'الأنظمة السمعية والبصرية وغرف الاجتماعات','PABX':'أنظمة البدالات وهواتف IP','Business IT':'حلول تقنية المعلومات للأعمال'};const wanted=document.documentElement.lang==='ar'?(arMap[service]||service):service;for(const option of select.options){if(option.text.toLowerCase().includes(wanted.toLowerCase())||wanted.toLowerCase().includes(option.text.toLowerCase())){select.value=option.value||option.text;break;}}}
     if(quoteModal)quoteModal.show();
   }));
+
+  const cctvSurveyForm=document.getElementById('cctvSurveyForm');
+  if(cctvSurveyForm){
+    cctvSurveyForm.addEventListener('submit',event=>{
+      event.preventDefault();
+      if(!cctvSurveyForm.reportValidity()) return;
+      const data=new FormData(cctvSurveyForm);
+      const name=(data.get('name')||'').toString().trim();
+      const phone=(data.get('phone')||'').toString().trim();
+      const service=(data.get('service')||'').toString().trim();
+      const emirate=(data.get('emirate')||'').toString().trim();
+      const property=(data.get('property')||'').toString().trim();
+      const details=(data.get('details')||'').toString().trim();
+      const body=[
+        'Hello AI Souq, I would like to request a CCTV site survey.',
+        '',
+        'Full Name: '+name,
+        'Phone Number: '+phone,
+        'Service Required: '+service,
+        'Emirate / Location: '+emirate,
+        'Property Type: '+property,
+        'Additional Details: '+(details||'Not provided'),
+        '',
+        'Submitted from the AI Souq website.'
+      ].join('\n');
+      const feedback=document.getElementById('cctvSurveyFeedback');
+      if(feedback){
+        feedback.className='small mt-2 text-success';
+        feedback.textContent='WhatsApp is opening with your enquiry. Please review the details and press Send to complete your request.';
+      }
+      const whatsappUrl='https://wa.me/971561725767?text='+encodeURIComponent(body);
+      const opened=window.open(whatsappUrl,'_blank','noopener,noreferrer');
+      if(!opened) window.location.href=whatsappUrl;
+    });
+  }
+
+
+  // Service-page site survey forms: prepare a WhatsApp enquiry for the visitor to review and send.
+  document.querySelectorAll('[data-site-survey-form]').forEach(form=>form.addEventListener('submit',event=>{
+    event.preventDefault(); if(!form.reportValidity())return; const data=new FormData(form);
+    const fields=[['Full Name','name'],['Phone Number','phone'],['Service Required','service'],['Emirate / Location','emirate'],['Property Type','property']];
+    const lines=['Hello AI Souq, I would like to request a site survey.',''];
+    fields.forEach(([label,key])=>lines.push(label+': '+String(data.get(key)||'').trim()));
+    lines.push('Additional Details: '+(String(data.get('details')||'').trim()||'Not provided')); lines.push('','Submitted from the AI Souq website.');
+    const feedback=form.querySelector('.site-survey-feedback'); if(feedback){feedback.className='site-survey-feedback small mt-2 mb-0 text-success';feedback.textContent='WhatsApp is opening with your enquiry. Please review the details and press Send to complete your request.';}
+    const url='https://wa.me/971561725767?text='+encodeURIComponent(lines.join('\n')); const opened=window.open(url,'_blank','noopener,noreferrer'); if(!opened)window.location.href=url;
+  }));
+
   // WhatsApp enquiry handling: validates the form and opens a pre-filled message to AI Souq.
   // WhatsApp requires the visitor to press Send; this website does not send messages silently.
   document.querySelectorAll('[data-lead-form]').forEach(form=>form.addEventListener('submit',event=>{
