@@ -60,3 +60,6 @@ PRO WEBSITE UPDATE (October 2026)
 - Images are local SVG assets for fast loading and crisp rendering across screen sizes.
 
 CCTV SEO update: cctv-surveillance.html includes the requested SEO metadata, installation details, property solutions, FAQs, UAE coverage and a site-survey form that prepares an enquiry in WhatsApp.
+
+
+UPDATE: Added virtual IT support landing page at services/virtual-it-support-dubai-abu-dhabi/index.html. Canonical URL configured as https://www.aisouq.ae/services/virtual-it-support-dubai-abu-dhabi/. jQuery 3.5.1 CDN included in the head of all HTML pages.
