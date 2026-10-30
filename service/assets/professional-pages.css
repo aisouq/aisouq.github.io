@@ -1,0 +1,24 @@
+
+/* AI Souq service-page refinement: consistent, premium service sliders and navigation */
+.service-full-slider{position:relative;isolation:isolate;min-height:clamp(510px,64vh,720px);background:#071a32;overflow:hidden}
+.service-full-slider .carousel,.service-full-slider .carousel-inner,.service-full-slider .carousel-item{min-height:inherit;height:100%}
+.service-full-slider .carousel-item{height:clamp(510px,64vh,720px);background:#071a32}
+.service-full-slider .service-slider-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.78}
+.service-full-slider .service-slider-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,17,36,.94) 0%,rgba(4,24,48,.78) 48%,rgba(4,24,48,.2) 100%),linear-gradient(0deg,rgba(4,18,36,.35),transparent 55%)}
+.service-full-slider .service-slider-caption{position:relative;z-index:2;min-height:clamp(510px,64vh,720px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding-top:75px;padding-bottom:90px;color:#fff}
+.service-full-slider .service-slider-kicker{display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;color:#9fe5ff;font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.service-full-slider .service-slider-kicker:before{content:"";width:30px;height:2px;background:#35c5e8}
+.service-full-slider .service-slider-caption h1{max-width:820px;margin:0 0 20px;color:#fff;font-family:Manrope, sans-serif;font-size:clamp(2.45rem,5.3vw,4.65rem);font-weight:800;line-height:1.08;letter-spacing:-.045em;text-wrap:balance}
+.service-full-slider .service-slider-caption p{max-width:660px;margin:0 0 30px;color:rgba(255,255,255,.86);font-size:clamp(1rem,1.35vw,1.18rem);line-height:1.8}
+.service-full-slider .service-slider-actions{display:flex;flex-wrap:wrap;gap:12px}
+.service-full-slider .service-slider-actions .btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:14px 23px;font-weight:700;transition:transform .2s ease,box-shadow .2s ease}
+.service-full-slider .service-slider-actions .btn-primary{border-color:#19a8d0;background:#12a5ce;box-shadow:0 10px 30px rgba(18,165,206,.2)}
+.service-full-slider .service-slider-actions .btn:hover{transform:translateY(-2px)}
+.service-full-slider .carousel-indicators{z-index:3;justify-content:flex-start;max-width:1140px;margin:0 auto 28px;padding:0 12px}
+.service-full-slider .carousel-indicators [data-bs-target]{width:28px;height:4px;border:0;border-radius:8px;opacity:.55}
+.service-full-slider .carousel-indicators .active{width:48px;opacity:1;background:#39c6e8}
+.nav-amc-link .nav-link{font-weight:700}
+.nav-amc-link .nav-link:after{content:"";display:block;height:2px;width:0;background:#18afd3;transition:width .2s ease}
+.nav-amc-link .nav-link:hover:after{width:100%}
+.page-it-redesign .vit-hero,.page-amc-redesign .page-hero{display:none}
+@media(max-width:767px){.service-full-slider,.service-full-slider .carousel-item,.service-full-slider .service-slider-caption{min-height:570px;height:570px}.service-full-slider .service-slider-caption{padding-top:58px;padding-bottom:75px}.service-full-slider .service-slider-caption h1{font-size:clamp(2.25rem,10vw,3.1rem)}.service-full-slider .service-slider-caption p{font-size:1rem;line-height:1.65}.service-full-slider .service-slider-actions .btn{padding:12px 17px}.service-full-slider .carousel-indicators{padding:0 22px}}
