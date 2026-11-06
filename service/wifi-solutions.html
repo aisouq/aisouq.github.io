@@ -29,7 +29,24 @@
 
   gtag('config', 'G-3G4XGF1XE9');
 </script>
-  <!-- Google tag (gtag.js) -->
+<!-- Event snippet for Website lead conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18374100874/w7h8CMfkkbEdEIqPurlE',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18374100874">
 </script>
 <script>
